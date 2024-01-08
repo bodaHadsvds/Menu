@@ -44,17 +44,13 @@ const App = () => {
   return (
     <main>
       <section className="menu">
-        <Title text="our menu" />
-
-        <Categories categories={categories} filterItems={filterItems} />
-        <input
-          type="text"
-          id="search"
-          placeholder="search by name "
-          className="form_input"
-          value={searhFiled}
-          onChange={(e) => setSearchField(e.target.value)}
-        />
+        <Title text="our menu" />{" "}
+        <Categories
+          categories={categories}
+          filterItems={filterItems}
+          setSearchField={setSearchField}
+          searhFiled={searhFiled}
+        />{" "}
         <Menu items={menuItem} />
       </section>
     </main>
